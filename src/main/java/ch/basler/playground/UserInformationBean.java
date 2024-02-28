@@ -12,15 +12,15 @@ import jakarta.ejb.SessionContext;
 import jakarta.ejb.Stateless;
 
 @Resources({//
-    @Resource(name = "java:jboss/exported/" + MyTest.JNDI_NAME, lookup = "java:module/MyTestBean"),
-    @Resource(name = "java:/" + MyTest.JNDI_NAME, lookup = "java:module/MyTestBean")})
-@Stateless(mappedName = MyTest.JNDI_NAME)
-@Remote(MyTest.class)
+    @Resource(name = "java:jboss/exported/" + UserInformation.JNDI_NAME, lookup = "java:module/UserInformationBean"),
+    @Resource(name = "java:/" + UserInformation.JNDI_NAME, lookup = "java:module/UserInformationBean")})
+@Stateless(mappedName = UserInformation.JNDI_NAME)
+@Remote(UserInformation.class)
 @SecurityDomain("my-basler-domain")
-public class MyTestBean implements MyTest {
+public class UserInformationBean implements UserInformation {
   private static final String USER_WITH_PERMISSIONS = "User %s with RACFPrefixPSANF: %s and AuthenticatedRole: %s.";
 
-  private static final Logger LOG = LoggerFactory.getLogger(MyTestBean.class);
+  private static final Logger LOG = LoggerFactory.getLogger(UserInformationBean.class);
 
   @Resource
   private SessionContext sessionContext;

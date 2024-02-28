@@ -1,0 +1,17 @@
+{
+  "realm" : "Baloise",
+  "provider-url" : "${env.AUTH_SERVER_URL}",
+  "ssl-required" : "external",
+  "client-id" : "${env.CLIENT_ID}",
+
+  "public-client" : "false",
+  "principal-attribute" : "preferred_username",
+  "credentials" : {
+    "secret" : "${env.CLIENT_SECRET}"
+  },
+
+  "verify-token-audience" : false,
+  "use-resource-role-mappings" : false,
+  "bearer-only" : false
+  
+}
