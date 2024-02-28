@@ -25,8 +25,15 @@ public class UserInformationStarter {
 
     UserInformation userInformation = (UserInformation) context.lookup(UserInformation.JNDI_NAME);
 
-    String result = userInformation.executeProtectedMethod("inputProtected");
+    String result = null;
+    LOG.info("Calling public method of EJB:");
+    result = userInformation.executePublicMethod("inputPublic");
     LOG.info(result);
+
+    LOG.info("Calling protected method of EJB:");
+    result = userInformation.executeProtectedMethod("inputProtected");
+    LOG.info(result);
+
     return result;
   };
 
