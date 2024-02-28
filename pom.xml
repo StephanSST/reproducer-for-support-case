@@ -14,18 +14,6 @@
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
   <dependencies>
     <!--3rd party libs -->
     <dependency>
@@ -53,7 +41,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- Test Libs -->
+    <!-- JBoss Test Libs -->
     <dependency>
       <groupId>org.jboss.eap</groupId>
       <artifactId>wildfly-ejb-client-bom</artifactId>
@@ -62,6 +50,8 @@
       <scope>test</scope>
       <optional>true</optional>
     </dependency>
+
+    <!-- JWT Test Libs -->
     <dependency>
       <groupId>com.nimbusds</groupId>
       <artifactId>nimbus-jose-jwt</artifactId>
@@ -80,8 +70,6 @@
       <version>20210307</version>
       <scope>test</scope>
     </dependency>
-
-
   </dependencies>
 
 </project>
