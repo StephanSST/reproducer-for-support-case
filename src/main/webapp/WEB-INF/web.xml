@@ -4,7 +4,7 @@
   xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
 
   <login-config>
-    <auth-method>OIDC</auth-method>
+    <auth-method>BEARER_TOKEN</auth-method>
   </login-config>
 
   <module-name>MyDummyServlet</module-name>
