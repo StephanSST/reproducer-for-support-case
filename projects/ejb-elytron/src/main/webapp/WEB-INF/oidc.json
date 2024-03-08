@@ -1,6 +1,6 @@
 {
   "realm" : "Baloise",
-  "provider-url" : "${env.KEYCLOAK_URL}",
+  "provider-url" : "${env.KEYCLOAK_URL}/realms/Baloise",
   "ssl-required" : "external",
   "client-id" : "${env.CLIENT_ID}",
 
